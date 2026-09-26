@@ -7,7 +7,7 @@
 | macOS Apple 芯片 | `ZCode-Preview-3.14.3-mac-arm64.dmg` | `wps-edu-zcode-cli-0.2.1-darwin-arm64.tgz` |
 | Windows x64 | `ZCode-Preview-3.14.3-win-x64.exe` | `wps-edu-zcode-cli-0.2.1-win-x64.tgz` |
 
-桌面版安装后，进入 **设置 → 模型设置 → WPS Comate → 登录 WPS Comate**，在弹出的 WPS 官方网页完成登录。
+桌面安装包的应用名称是 **ZCode Preview**，可与原版 ZCode 并存。打开它，进入 **设置 → 模型设置 → 添加供应商 → 其他 → WPS Comate → 登录 WPS Comate**，在弹出的 WPS 官方网页完成登录。新安装时先从“添加供应商”创建 WPS Comate。
 
 CLI 下载后在文件所在目录安装：
 
