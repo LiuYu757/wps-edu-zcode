@@ -1,11 +1,11 @@
 # WPS EDU ZCode 下载与登录
 
-从 [Release v0.2.0](https://github.com/LiuYu757/wps-edu-zcode/releases/tag/v0.2.0) 下载对应文件：
+从 [Release v0.2.1](https://github.com/LiuYu757/wps-edu-zcode/releases/tag/v0.2.1) 下载对应文件：
 
 | 系统 | 桌面版 | CLI |
 | --- | --- | --- |
-| macOS Apple 芯片 | `ZCode-Preview-3.14.3-mac-arm64.dmg` | `wps-edu-zcode-cli-0.2.0-darwin-arm64.tgz` |
-| Windows x64 | `ZCode-Preview-3.14.3-win-x64.exe` | `wps-edu-zcode-cli-0.2.0-win-x64.tgz` |
+| macOS Apple 芯片 | `ZCode-Preview-3.14.3-mac-arm64.dmg` | `wps-edu-zcode-cli-0.2.1-darwin-arm64.tgz` |
+| Windows x64 | `ZCode-Preview-3.14.3-win-x64.exe` | `wps-edu-zcode-cli-0.2.1-win-x64.tgz` |
 
 桌面版安装后，进入 **设置 → 模型设置 → WPS Comate → 登录 WPS Comate**，在弹出的 WPS 官方网页完成登录。
 
@@ -13,12 +13,12 @@ CLI 下载后在文件所在目录安装：
 
 ```sh
 # macOS
-npm install -g ./wps-edu-zcode-cli-0.2.0-darwin-arm64.tgz
+npm install -g ./wps-edu-zcode-cli-0.2.1-darwin-arm64.tgz
 ```
 
 ```powershell
 # Windows PowerShell
-npm install -g .\wps-edu-zcode-cli-0.2.0-win-x64.tgz
+npm install -g .\wps-edu-zcode-cli-0.2.1-win-x64.tgz
 ```
 
 CLI 有两种登录方式，任选一种：
@@ -50,6 +50,8 @@ CLI 有两种登录方式，任选一种：
 ```
 
 已有配置文件时，只更新 WPS 供应商的 `apiKey` 和所需的 `defaultModelSelection`，保留其他字段。运行 `wps-zcode --prompt "你好"` 测试。会话值属于个人登录凭据，勿提交或分享配置文件。模型请求由 ZCode 直接发送到 Comate，不需要本地桥接服务。
+
+Windows CLI 请从 PowerShell 运行，不要双击 exe。登录窗口若空白，可在同一窗口打开 `https://comate.wps.cn/web?source_from=official_website` 重试；仍失败时运行 `wps-zcode login wps --verbose` 查看错误。
 
 若选择网页登录，登录后在同一配置文件的 `config` 中设置 `"defaultModelSelection": {"providerId": "wps-comate", "modelId": "deepseek-v4-flash"}`；若登录命令输出的供应商 ID 不同，请替换 `providerId`。
 
