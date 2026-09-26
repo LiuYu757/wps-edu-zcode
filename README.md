@@ -50,3 +50,5 @@ CLI 有两种登录方式，任选一种：
 ```
 
 已有配置文件时，只更新 WPS 供应商的 `apiKey` 和所需的 `defaultModelSelection`，保留其他字段。运行 `wps-zcode --prompt "你好"` 测试。会话值属于个人登录凭据，勿提交或分享配置文件。模型请求由 ZCode 直接发送到 Comate，不需要本地桥接服务。
+
+若选择网页登录，登录后在同一配置文件的 `config` 中设置 `"defaultModelSelection": {"providerId": "wps-comate", "modelId": "deepseek-v4-flash"}`；若登录命令输出的供应商 ID 不同，请替换 `providerId`。
